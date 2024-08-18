@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{{ macros.m_button_group([['globalSettingSaveBtn', '설정 저장']])}}
+{{ macros.m_row_start('5') }}
+{{ macros.m_row_end() }}
+{{ macros.m_hr() }}
+
+<form id='setting'>
+  {{ macros.setting_checkbox('subtitle_use_smi_to_srt', 'smi to srt', value=arg['subtitle_use_smi_to_srt'], desc=['설정 : smi파일 삭제. ko.srt로 변환. srt, smi 같이 있는 경우 변환 없이 smi만 삭제']) }}
+</form>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+});
+
+</script>    
+{% endblock %}
